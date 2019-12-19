@@ -19,10 +19,13 @@ int main(void)
 
 	// Setting P1.0 as output
     P1DIR = P1DIR | BIT0;   // P1DIR = 0bXXXX_XXX1
+	
 	// Setting P1.3 as input
 	P1DIR = P1DIR & ~BIT3;  // P1DIR = 0bXXXX_0XX1
+	
 	// Enabling Pull up/down for P1.3
 	P1REN = P1REN | BIT3;   // P1REN = 0b0000_1000
+	
 	// Using Pull up resistor
 	P1OUT = P1OUT | BIT3;   // P1OUT?? slau114j page 329
 
