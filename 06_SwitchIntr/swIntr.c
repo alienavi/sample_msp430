@@ -36,6 +36,10 @@ int main(void)
   // Set Interrupt type
   P1IES |= SW;
   // Enable PIN Interrupt
+	P1IE |= SW;
+	
+	//Enable CPU Interrupts
+	__bits_SR_register(GIE);	//Global Interrupts
 	while(1){   // loop	    
 	}
 
