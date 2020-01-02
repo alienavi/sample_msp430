@@ -39,7 +39,7 @@ int main(void)
 	P1IE |= SW;
 	
 	//Enable CPU Interrupts
-	__bits_SR_register(GIE);	//Global Interrupts
+	__bis_SR_register(GIE);	//Global Interrupts
 	while(1){   // loop	    
 	}
 
