@@ -32,7 +32,7 @@ void main(void)
 	P1IES |= SW;
 	P1IE |= SW;
 	// Enable Global Interrupt and LPM
-	__bits_SR_register(GIE + LPM4_bits); //LPM4_bits ?????
+	__bis_SR_register(GIE + LPM4_bits); //LPM4_bits ?????
 }
 
 #pragma vector = PORT1_VECTOR
