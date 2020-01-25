@@ -13,7 +13,7 @@ void main(void)
     TACCTL0 |= CCIE;					// Enable Overflow Interrupt
     TACTL |= MC_1 + TASSEL_1 + TACLR ;	// Set Mode -> Up Count, Clock -> ACLK, Clear Timer
 
-   	__bis_SR_register(GIE);	// Goto LPM3 (Only ACLK active), Enable CPU Interrupt
+   	__bis_SR_register(GIE);	//Enable CPU Interrupt
 }
 
 #pragma vector = TIMER0_A0_VECTOR		// CCR0 Interrupt Vector
