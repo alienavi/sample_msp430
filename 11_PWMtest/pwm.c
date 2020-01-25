@@ -8,9 +8,9 @@ void main(void)
 	P1DIR |= GREEN;							// Green LED -> Output
 	P1SEL |= GREEN;							// Green LED -> Select Timer Output
 
-	CCR0 = 500;								// Set Timer0 PWM Period
-	CCTL1 = OUTMOD_7;						// Set TA0.1 Waveform Mode - Clear on Compare, Set on Overflow
-	CCR1 = 1;								// Set TA0.1 PWM duty cycle
+	TACCR0 = 500;								// Set Timer0 PWM Period
+	TACCTL1 = OUTMOD_7;						// Set TA0.1 Waveform Mode - Clear on Compare, Set on Overflow
+	TACCR1 = 1;								// Set TA0.1 PWM duty cycle
 	TACTL = TASSEL_2 + MC_1;				// Timer Clock -> SMCLK, Mode -> Up Count
 
 	while(1)
